@@ -4,7 +4,6 @@ from IPy import IP
 from os import getcwd
 class QueryIP(object):
     def __init__(self):
-        print getcwd()
         try:
             f=open(getcwd()+u"/data.json".encode("gbk"))
         except Exception,e:
@@ -31,18 +30,18 @@ class QueryIP(object):
                         return IP_Info
         return False
 
-go=QueryIP()
-ip="1.1.1.1"
-if go.CheckIP(ip):
-    result=go.Query(ip)
-    if result:
-        print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-        for i in result.keys():
-            print i ,":",result[i]
-    else:
-        print "没有查询到此IP。"
-else:
-    print "不是合法的IP地址。"
+#go=QueryIP()
+#ip="1.1.1.1"
+#if go.CheckIP(ip):
+#    result=go.Query(ip)
+#    if result:
+#        print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+#        for i in result.keys():
+#            print i ,":",result[i]
+#    else:
+#        print "没有查询到此IP。"
+#else:
+#    print "不是合法的IP地址。"
 
 
 

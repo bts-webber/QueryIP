@@ -41,7 +41,7 @@ class InputIP(object):
         return self.data
 go=InputIP()
 go.GetFileName(u'E:/文档/IP地址/'.encode("gbk"))
-data=go.GetIpTable(u'E:/文档/IP地址/1'.encode("gbk"))
+data=go.GetIpTable(u'E:/文档/IP地址/'.encode("gbk"))
 f=open(getcwd()+"/"+"data.json",'w')
 data=json.dumps(data,encoding='utf-8')
 f.write(data)
